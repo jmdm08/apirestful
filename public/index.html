@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" type="text/css" href="./css/formulario.css">
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <nav></nav>
+        <section>
+            <article>
+                <div class="div-form">
+                    <form>
+                        <div>
+                            <label for="nombres">Nombres:</label>
+                            <input type="text" id="nombres" name="nombres">
+                        </div>
+                        <div>
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" id="apellidos" name="apellidos">
+                        </div>
+                        <div>
+                            <label for="identificacion">Identificación:</label>
+                            <input type="text" id="identificacion" name="identificacion">
+                        </div>
+                        <div>
+                            <label for="profesion">Profesión:</label>
+                            <input type="text" id="profesion" name="profesion">
+                        </div>
+                        <div>
+                            <label for="tipoIdentificacion">Tipo Identificación:</label>
+                            <input type="text" id="tipoIdentificacion" name="tipoIdentificacion">
+                        </div>
+                        <div class="div-btn">
+                            <button type="button" id="btnGuardar">Guardar</button><button type="reset" id="btnReset">Cancelar</button>                        </div>
+                        <input type="hidden" value="crear" id="accion">
+                        <input type="hidden" value="" id="fila">
+                    </form>
+                </div>
+            </article>
+            <article>
+                <div class="div-tabla">
+                    <table id="datosTabla">
+                        <caption>Tabla Datos Personales</caption>
+                        <thead>
+                            <tr>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>Identificación</th>
+                                <th>Profesión</th>
+                                <th>Tipo Identificación</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+    </body>
+    <script src="js/formulario.js"></script>
+</html>

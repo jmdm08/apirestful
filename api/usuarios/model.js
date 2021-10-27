@@ -68,7 +68,26 @@ function deleteOne(id){
         })
 }
 
+function updateOneById(id, datos){
+    const sql = "UPDATE personas SET nombres = ?, apellidos = ?, numero_identificacion = ?, " +
+                " id_tipo_identificacion = ?, id_profesion = ? " +
+                " WHERE id = ?";
+    let arrayDatos = [datos.nombres, datos.apellidos, datos.identificacion, datos.tipoIdentificacion, datos.profesion, id];
+
+    return conexion.getConnection()
+        .then(function(con){
+            return con.query(sql, arrayDatos)
+                .then(function(resultados){
+                    return resultados;
+                })
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+}
+
 module.exports.findAll = findAll;
 module.exports.findOneById = findOneById;
 module.exports.insertOne = insertOne;
 module.exports.deleteOne = deleteOne;
+module.exports.updateOneById = updateOneById;

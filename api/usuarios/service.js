@@ -23,7 +23,17 @@ async function deleteOne(id){
     return resultado;
 }
 
+async function updateOneById(id, datos){
+    let resultado = await modelUsuarios.updateOneById(id, datos);
+    /*
+        AQUI EL RESTO DEL CÓDIGO QUE SEA NECESARIO PARA TRANSFORMAR LOS DATOS.
+        LA LÓGICA DE PROGRAMACIÓN....
+    */
+    return resultado;
+}
+
 module.exports.findAll = findAll;
 module.exports.findOneById = findOneById;
 module.exports.insertOne = insertOne;
 module.exports.deleteOne = deleteOne;
+module.exports.updateOneById = updateOneById;

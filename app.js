@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
 const controllerUsuarios = require('./api/usuarios/controller');
+const controllerAuth = require('./api/auth/controller');
 require('dotenv').config();
 
 const app = express();
@@ -24,6 +25,7 @@ app.get("/", function(req, res){
 
 // PATH RESOURCES.
 app.use("/usuarios", controllerUsuarios);
+app.use("/auth", controllerAuth);
 
 app.listen(port, function(){
     console.log("Api ejecutándose en el puerto " + port);

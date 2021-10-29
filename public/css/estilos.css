@@ -40,8 +40,8 @@ a {
     margin: auto;
     margin-bottom: 280px;
     max-width: 525px;
-    top: 180px;
-    min-height: 570px;
+    top: 80px;
+    min-height: 370px;
     position: relative;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
@@ -73,7 +73,7 @@ a {
 }
 
 .login-html .tab,
-.login-form .group .label,
+.login-form .group .label
 {
     text-transform: uppercase;
 }
